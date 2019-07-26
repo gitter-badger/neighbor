@@ -107,7 +107,7 @@ func main() {
 		defer func() {
 			err := os.RemoveAll(ctx.ExtResultDir)
 			if err != nil {
-				glog.Exitf("error removing collated directory: %+v", err)
+				_, _ = glog.Exitf, err
 			}
 		}()
 	}
